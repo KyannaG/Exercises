@@ -1,0 +1,97 @@
+body {
+    justify-content: center;
+}
+
+.button {
+    width:100px;
+    height:50px;
+    font-size: large;
+    background-color: rgb(72, 152, 238);
+    /* font-size: 50px; */
+    color: white;
+    border-radius: 5px ;
+    }
+    
+    .button:hover {
+    background-color:rgb(72, 97, 238);
+    cursor: pointer;
+    transform: scale(1.05);
+
+    }
+
+.cats {
+    align-items: center;
+display: flexbox;
+border: 2px black;
+box-shadow: 1px;
+}
+
+#container {
+    width:300px;
+    border: 1px solid rgb(185, 182, 182);
+    border-radius: 5px;
+    background-color:rgb(229, 229, 229);
+}
+
+.eyes{
+    background-image:url(https://images.saymedia-content.com/.image/t_share/MTk2NzQ2MjQxMzA3MDU5ODQy/names-for-cats-with-big-eyes.png);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+}
+
+#container .cats{ 
+    height: 100x;
+    border: .5px solid rgb(185, 182, 182);
+}
+
+img {
+    display: inline-block;
+    margin: 30px;
+    height: 200px;
+    width: 200px;
+}
+
+.gifs {
+    position: relative;
+    padding: 0;
+    width: 200px;
+    display: inline-block;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .content {
+    opacity: 0;
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #f0f2f3;
+    background-color: rgba(42, 41, 41, 0.599);
+    margin: 30px;
+    width: 200px;
+    height: 200px;
+    -webkit-transition: all 400ms ease-out;
+    -moz-transition: all 400ms ease-out;
+    -o-transition: all 400ms ease-out;
+    -ms-transition: all 400ms ease-out;
+    transition: all 400ms ease-out;
+    text-align: center;
+  }
+  .gifs .content:hover {
+    opacity: 1;
+  }
+  .gifs .content .text {
+    height: 0;
+    opacity: 1;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+  }
+
+  .gifs .content:hover .text {
+    opacity: 1;
+    text-align: center;
+    width: 200px;
+    transform: translateY(50px);
+    -webkit-transform: translateY(50px);
+  }
