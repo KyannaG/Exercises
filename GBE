@@ -1,0 +1,175 @@
+Last login: Thu Mar  7 00:35:46 on ttys004
+kyanna@Kyannas-Macbook-Air ~ % pwd
+/Users/kyanna
+kyanna@Kyannas-Macbook-Air ~ % ls
+Applications		Documents		Music
+Budget Tool.xlsx	Downloads		Pictures
+Creative Cloud Files	Library			Public
+Desktop			Movies			first_folder
+kyanna@Kyannas-Macbook-Air ~ % rm first_folder
+rm: first_folder: is a directory
+kyanna@Kyannas-Macbook-Air ~ % rmdir first_folder
+rmdir: first_folder: Directory not empty
+kyanna@Kyannas-Macbook-Air ~ % cd first_folder
+kyanna@Kyannas-Macbook-Air first_folder % ls
+another.txt	copy.txt
+kyanna@Kyannas-Macbook-Air first_folder % rm another.txt
+kyanna@Kyannas-Macbook-Air first_folder % rm copy.txt
+kyanna@Kyannas-Macbook-Air first_folder % ls
+kyanna@Kyannas-Macbook-Air first_folder % rmdir first_folder
+rmdir: first_folder: No such file or directory
+kyanna@Kyannas-Macbook-Air first_folder % ls
+kyanna@Kyannas-Macbook-Air first_folder % pwd
+/Users/kyanna/first_folder
+kyanna@Kyannas-Macbook-Air first_folder % cd ..
+kyanna@Kyannas-Macbook-Air ~ % ls
+Applications		Documents		Music
+Budget Tool.xlsx	Downloads		Pictures
+Creative Cloud Files	Library			Public
+Desktop			Movies			first_folder
+kyanna@Kyannas-Macbook-Air ~ % rmdir first_folder
+kyanna@Kyannas-Macbook-Air ~ % ls
+Applications		Documents		Music
+Budget Tool.xlsx	Downloads		Pictures
+Creative Cloud Files	Library			Public
+Desktop			Movies
+kyanna@Kyannas-Macbook-Air ~ % mkdir learn_git_again
+kyanna@Kyannas-Macbook-Air ~ % cd learn_git_again
+kyanna@Kyannas-Macbook-Air learn_git_again % ls
+kyanna@Kyannas-Macbook-Air learn_git_again % touch third.txt
+kyanna@Kyannas-Macbook-Air learn_git_again % ls
+third.txt
+kyanna@Kyannas-Macbook-Air learn_git_again % git init
+Initialized empty Git repository in /Users/kyanna/learn_git_again/.git/
+kyanna@Kyannas-Macbook-Air learn_git_again % ls
+third.txt
+kyanna@Kyannas-Macbook-Air learn_git_again % git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	third.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+kyanna@Kyannas-Macbook-Air learn_git_again % git add third.txt
+kyanna@Kyannas-Macbook-Air learn_git_again % git commit -m adding third.txt
+[main (root-commit) 3abf185] adding
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+kyanna@Kyannas-Macbook-Air learn_git_again % git log
+commit 3abf1858f6dc5c61c06fa2749a9ecef3ecdbf2a8 (HEAD -> main)
+Author: KyannaG <100180586+KyannaG@users.noreply.github.com>
+Date:   Thu Mar 7 00:56:01 2024 -0500
+
+    adding
+kyanna@Kyannas-Macbook-Air learn_git_again % touch fourth.txt
+kyanna@Kyannas-Macbook-Air learn_git_again % git add fourth.txt
+kyanna@Kyannas-Macbook-Air learn_git_again % git commit -m "adding fourth.txt"
+[main 1e5849c] adding fourth.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+kyanna@Kyannas-Macbook-Air learn_git_again % git log
+commit 1e5849c40d7faa108caf1a628a91bf46281fcac4 (HEAD -> main)
+Author: KyannaG <100180586+KyannaG@users.noreply.github.com>
+Date:   Thu Mar 7 00:58:34 2024 -0500
+
+    adding fourth.txt
+
+commit 3abf1858f6dc5c61c06fa2749a9ecef3ecdbf2a8
+Author: KyannaG <100180586+KyannaG@users.noreply.github.com>
+Date:   Thu Mar 7 00:56:01 2024 -0500
+
+    adding
+kyanna@Kyannas-Macbook-Air learn_git_again % rm third.txt
+kyanna@Kyannas-Macbook-Air learn_git_again % git log
+commit 1e5849c40d7faa108caf1a628a91bf46281fcac4 (HEAD -> main)
+Author: KyannaG <100180586+KyannaG@users.noreply.github.com>
+Date:   Thu Mar 7 00:58:34 2024 -0500
+
+    adding fourth.txt
+
+commit 3abf1858f6dc5c61c06fa2749a9ecef3ecdbf2a8
+Author: KyannaG <100180586+KyannaG@users.noreply.github.com>
+Date:   Thu Mar 7 00:56:01 2024 -0500
+
+    adding
+kyanna@Kyannas-Macbook-Air learn_git_again % git add third.txt
+kyanna@Kyannas-Macbook-Air learn_git_again % git commit -m "removing third.txt"
+[main bf4d382] removing third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+kyanna@Kyannas-Macbook-Air learn_git_again % git log
+commit bf4d382906f89bcd8b06468ad8f7c1c1a3563d35 (HEAD -> main)
+Author: KyannaG <100180586+KyannaG@users.noreply.github.com>
+Date:   Thu Mar 7 01:01:49 2024 -0500
+
+    removing third.txt
+
+commit 1e5849c40d7faa108caf1a628a91bf46281fcac4
+Author: KyannaG <100180586+KyannaG@users.noreply.github.com>
+Date:   Thu Mar 7 00:58:34 2024 -0500
+
+    adding fourth.txt
+
+commit 3abf1858f6dc5c61c06fa2749a9ecef3ecdbf2a8
+Author: KyannaG <100180586+KyannaG@users.noreply.github.com>
+Date:   Thu Mar 7 00:56:01 2024 -0500
+
+    adding
+kyanna@Kyannas-Macbook-Air learn_git_again % git config --global core.pager "cat"
+kyanna@Kyannas-Macbook-Air learn_git_again % git config --global
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <type>     value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+kyanna@Kyannas-Macbook-Air learn_git_again % git config --global --list
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+user.name=KyannaG
+user.email=100180586+KyannaG@users.noreply.github.com
+core.pager=cat
+kyanna@Kyannas-Macbook-Air learn_git_again % 
